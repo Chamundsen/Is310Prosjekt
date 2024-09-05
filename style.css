@@ -1,3 +1,7 @@
+html, body {
+    padding-bottom: 100px; 
+}
+
 .team 
 {
    margin: 75px 0;  
@@ -30,6 +34,13 @@ h1:after
     display: block;
     position:relative;
 
+}
+
+.profile .img-box img 
+{
+    width: 250px; 
+    height: 350px; 
+    object-fit: cover; 
 }
 
 .profile h2
@@ -102,4 +113,26 @@ color: #fff
 .img-box:after, .img-box ul, img-box ul li
 {
     transition: all 0,5s ease-in-out 0s;
+}
+
+.grouptext 
+{
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.project
+{
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.ambitions 
+{
+    max-width: 600px; 
+    margin-left: auto; 
+    margin-right: auto;
+
 }
