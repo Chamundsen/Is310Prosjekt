@@ -159,3 +159,37 @@ h1:after {
     margin-left: auto;
     margin-right: auto;
 }
+/* Kontakter-seksjonen */
+.contacts {
+    margin-top: 50px; /* Plass over kontaktsseksjonen */
+    text-align: center; /* Sentrer kontaktsoverskriften og listen */
+}
+
+    .contacts h2 {
+        font-size: 28px; /* Større skrifttype for overskriften */
+        font-weight: bold;
+        color: #333; /* Matcher fargen til de andre overskriftene */
+        letter-spacing: 2px; /* Avstand mellom bokstaver */
+        margin-bottom: 20px; /* Plass under overskriften */
+    }
+
+    .contacts ul {
+        list-style: none; /* Fjerner punktlister */
+        padding: 0; /* Fjerner padding */
+    }
+
+    .contacts li {
+        margin: 10px 0; /* Plass mellom listeelementer */
+    }
+
+    .contacts a {
+        text-decoration: none; /* Fjerner understreking fra lenker */
+        color: #007bff; /* Setter lenkefarge */
+        font-size: 18px; /* Skriftstørrelse for lenker */
+    }
+
+        .contacts a:hover {
+            text-decoration: underline; /* Understreking ved hover for klarhet */
+            color: #0056b3; /* Mørkere nyanse ved hover */
+        }
+
