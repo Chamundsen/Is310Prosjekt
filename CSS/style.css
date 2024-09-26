@@ -7,6 +7,8 @@ html, body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 17px;
     scroll-behavior: smooth;
+    background-color: rgb(2, 2, 117);
+    color: rgb(255, 255, 255);
 }
 
 /* Navigation Bar */
@@ -63,7 +65,7 @@ html, body {
     text-align: center;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(122, 189, 255);
+    color: #245fbe;;
     background-color: rgb(246, 244, 244);
     position: relative; /* Sørger for at pseudo-elementet plasseres relativt til innledningen */
 }
@@ -107,6 +109,7 @@ h1 {
 
 
 .profile {
+    color: black;
     margin-top: 25px;
 }
 
@@ -190,27 +193,89 @@ h1 {
 }
 
 .information {
+    color: black;
     margin: 0; 
+}
+
+.grouptext h2 {
+    padding-top: 100px; 
+    padding-bottom: 20px;
+    margin-top: 0; 
 }
 
 .grouptext {
     max-width: 600px;
-    padding-top: 10px;
-    margin-bottom: 0;
+    padding-top: 75px; 
     margin-left: auto;
     margin-right: auto;
 }
 
+
 .project {
     max-width: 600px;
+    padding-top: 20px;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
 .ambitions {
     max-width: 600px;
+    padding-top: 20px;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+.technology h1{
+    padding-top: 150px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.icon-list {
+    list-style: none; 
+    padding: 0;
+    padding-bottom: 15px;
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.icon-list li {
+    width: 100px; 
+    height: 100px; 
+}
+
+.icon-list img {
+    width: 100%; 
+    height: auto; 
+    background-size: cover;
+}
+.icon-box {
+    overflow: hidden; 
+}
+
+
+.icon-box {
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: 2px solid #000000; 
+    border-radius: 8px; 
+    background-color: #ffffff; 
+    animation: float 3s ease-in-out infinite; 
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
 }
 /* Kontakter-seksjonen */
 .contacts {
