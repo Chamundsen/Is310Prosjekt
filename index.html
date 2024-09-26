@@ -85,26 +85,29 @@
                     </div>
                     <h2>Nam Hao Tra Ngo</h2>
                     <h4>Gruppemedlem</h4>
-                    <p>En student ved Universitetet i Agder (UIA) med spesiell interesse for digital design, systemarkitektur, og programmering. Har erfaring innen Java, PHP og Lua-programmering, samt kunnskap om informasjonssikkerhet og universell utforming.</p>
+                    <p>Jeg er interesert I diverse spill, der jeg plukket opp koding og fikk en brennende intresse for koding. Fra her har jeg dedikert meg til å lære nye kode språk.
+                        
+                    </p>
                 </div>
             </div>
-            <div class="info-box">
+            <div class="info-box" id="about">
                 <h4 class="information"> Mer informasjon</h4>
                 <p class="information"> På <a href="#contact">Kontakter</a> kan du lese mer om hvert enkelt gruppemedlem. </p>
                 </div>  
         </div>
     </section>
-    <!-- Tanken om gruppen -->
-    <h2 class="grouptext" id="about">Tanken om gruppen</h2>
-    <p class="grouptext">Noen av medlemmene i gruppen vår har samarbeidet i flere fag, men ikke alle har samarbeidet med alle på gruppen. Derfor vil det bli spennende og gøy å se hvordan alle samarbeider og kommuniserer for utviklingen av prosjektet. Vi har en positiv fremstilling til prosjektet og samarbeidet som vil foregå. Vi vet cirka hva gruppemedlemmene kan tilby av kompetanse og ferdigheter, og håper også på at alle på gruppen kan utvikle seg med dette prosjektet.</p>
 
-    <!-- Type prosjekt -->
-    <h2 class="project" id="projects">Prosjekt</h2>
-    <p class="project">Gruppen vår er enda ikke helt 100% sikre på hva slags type prosjekt vi vil jobbe med, men for nå ønsker vi et prosjekt der vi jobber med teknologisk utvikling. For eksempel, programvare, webtjeneste eller en applikasjon. Når det gjelder hva slags type bedrift vi vil samarbeide med, så er vi egentlig åpen for det meste. Det som er viktig for oss her er at vi finner en bedrift som kommuniserer og samarbeider med oss godt, og er interesserte i at vi skal lære.</p>
+    <section class="about-section">
+        <h2 class="grouptext animated">Tanken om gruppen</h2>
+        <p class="grouptext animated">Noen av medlemmene i gruppen vår har samarbeidet i flere fag, men ikke alle har samarbeidet med alle på gruppen. Derfor vil det bli spennende og gøy å se hvordan alle samarbeider og kommuniserer for utviklingen av prosjektet. Vi har en positiv fremstilling til prosjektet og samarbeidet som vil foregå. Vi vet cirka hva gruppemedlemmene kan tilby av kompetanse og ferdigheter, og håper også på at alle på gruppen kan utvikle seg med dette prosjektet.</p>
+        
+        <h2 class="project animated">Prosjekt</h2>
+        <p class="project animated">Gruppen vår er enda ikke helt 100% sikre på hva slags type prosjekt vi vil jobbe med, men for nå ønsker vi et prosjekt der vi jobber med teknologisk utvikling. For eksempel, programvare, webtjeneste eller en applikasjon. Når det gjelder hva slags type bedrift vi vil samarbeide med, så er vi egentlig åpen for det meste. Det som er viktig for oss her er at vi finner en bedrift som kommuniserer og samarbeider med oss godt, og er interesserte i at vi skal lære.</p>
+    
+        <h2 class="ambitions animated">Ambisjoner</h2>
+        <p class="ambitions animated">Vi har høye ambisjoner når det gjelder prosjektet vårt og vil sette høye krav til oss selv, som vi vil prøve å jobbe opp mot på best mulig måte.</p>
+    </section>
 
-    <!-- Ambisjonsnivå -->
-    <h2 class="ambitions">Ambisjoner</h2>
-    <p class="ambitions">Vi har høye ambisjoner når det gjelder prosjektet vårt og vil sette høye krav til oss selv, som vi vil prøve å jobbe opp mot på best mulig måte.</p>
 
     <section class="technology" id="technology">
         <div class="icon-frame">
@@ -134,5 +137,34 @@
 
         </ul>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const aboutSection = document.querySelector('.about-section');
+            const animatedParagraphs = aboutSection.querySelectorAll('.animated');
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animatedParagraphs.forEach((paragraph, index) => {
+                            // Add animation class with a delay for each paragraph
+                            setTimeout(() => {
+                                paragraph.classList.add('slide-in');
+                            }, index * 300); // Stagger the animations
+                        });
+                    } else {
+                        // Remove animation class when the section goes out of view
+                        animatedParagraphs.forEach(paragraph => {
+                            paragraph.classList.remove('slide-in');
+                        });
+                    }
+                });
+            }, { threshold: 0.1 }); // Trigger when 10% of the section is visible
+        
+            observer.observe(aboutSection); // Observe the about section
+        });
+        </script>
+        
+        
 </body>
 </html>
