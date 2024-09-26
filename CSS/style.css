@@ -37,10 +37,48 @@ html, body {
     color: black;
 }
 
-.home  {
-        padding-top: 120px;
-        margin-bottom: 10px;   
+.home {
+    background-image: url('../Bilder/gruppebilde.png'); 
+    background-size: cover;
+    background-position: center 50px;
+    background-repeat: no-repeat;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 70px; 
 }
+
+.home h1 {
+    padding-top: 250px;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(26, 22, 22, 0.7); 
+}
+
+.innledning {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(122, 189, 255);
+    background-color: rgb(246, 244, 244);
+    position: relative; /* Sørger for at pseudo-elementet plasseres relativt til innledningen */
+}
+
+.innledning:after {
+    content: ""; 
+    display: block; 
+    height: 2px; 
+    background-color: #000; 
+    width: 100%; 
+    position: absolute; 
+    bottom: 0;
+    left: 0; 
+}
+
 /* Team Section */
 .team {
     padding-top: 75px; 
@@ -67,15 +105,6 @@ h1 {
     padding-bottom: 10px;
 }
 
-
-h1:after {
-    content: "";
-    background: #333;
-    display: block;
-    height: 3px;
-    width: 350px;
-    margin: 10px auto;
-}
 
 .profile {
     margin-top: 25px;
