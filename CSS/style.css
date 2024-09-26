@@ -205,7 +205,7 @@ h1 {
 
 .grouptext {
     max-width: 600px;
-    padding-top: 75px; 
+    padding-top: 20px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -316,8 +316,39 @@ h1 {
         font-size: 18px; /* Skriftstørrelse for lenker */
     }
 
-        .contacts a:hover {
-            text-decoration: underline; /* Understreking ved hover for klarhet */
-            color: #0056b3; /* Mørkere nyanse ved hover */
-        }
+    .contacts a:hover {
+        text-decoration: underline; /* Understreking ved hover for klarhet */
+        color: #0056b3; /* Mørkere nyanse ved hover */
+    }
 
+    .animated-box {
+        color: #ffffff; /* Change text color as needed */
+        position: relative; /* Position relative for animation */
+        left: -100%; /* Start position off-screen to the left */
+        opacity: 0; /* Start with opacity 0 */
+        animation: slideInFromLeft 1s forwards; /* Single animation */
+    }
+    
+    .animated {
+        opacity: 0; /* Start hidden */
+        transform: translateX(-100%); /* Start off-screen to the left */
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth transition */
+    }
+    
+    .slide-in {
+        opacity: 1; /* Fully visible */
+        transform: translateX(0); /* Move into place */
+    }
+
+/* Optional: You can add delays for each paragraph */
+.grouptext.animated {
+    animation-delay: 1s; /* Delay for the first paragraph */
+}
+
+.project.animated {
+    animation-delay: 1.5s; /*Vent*/
+}
+
+.ambitions.animated {
+    animation-delay: 2s; /*Setter vente modus*/
+}
