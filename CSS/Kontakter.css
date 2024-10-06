@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e7ff; /* Soft light blue background */
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top for better layout */
+    width: 100%; /* Full width */
+    max-width: 1200px;
+    margin: 10px auto; /* Margin to separate boxes */
+    padding: 20px;
+    background-color: #f0f5ff; /* Slightly darker light lavender for box color */
+    border-radius: 8px; /* Optional: Add slight rounding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: left;
+}
+
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 5px solid #fff; /* White border for the image */
+}
+
+.profile-info {
+    flex: 1; /* Allow profile info to take the remaining space */
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #6b4f9e; /* Updated to new header color */
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0; /* Removed margin for consistent spacing */
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    .back-link:hover {
+        background-color: #555;
+    }
+
+footer {
+    margin-top: 20px; /* Increased margin for better spacing */
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+    .icons a {
+        margin: 0 10px;
+        color: #333;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+
+        .icons a:hover {
+            color: #555;
+        }
+
+/* Remove spacing between each profile */
+.container + .container {
+    margin-top: 0;
+    border-top: none; /* Remove top border to connect boxes */
+}

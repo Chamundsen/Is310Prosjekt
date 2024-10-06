@@ -7,6 +7,8 @@ html, body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 17px;
     scroll-behavior: smooth;
+    background-color: rgb(2, 2, 117);
+    color: rgb(255, 255, 255);
 }
 
 /* Navigation Bar */
@@ -37,10 +39,48 @@ html, body {
     color: black;
 }
 
-.home  {
-        padding-top: 120px;
-        margin-bottom: 10px;   
+.home {
+    background-image: url('../Bilder/gruppebilde.png'); 
+    background-size: cover;
+    background-position: center 50px;
+    background-repeat: no-repeat;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 70px; 
 }
+
+.home h1 {
+    padding-top: 250px;
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(26, 22, 22, 0.7); 
+}
+
+.innledning {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #245fbe;;
+    background-color: rgb(246, 244, 244);
+    position: relative; /* Sørger for at pseudo-elementet plasseres relativt til innledningen */
+}
+
+.innledning:after {
+    content: ""; 
+    display: block; 
+    height: 2px; 
+    background-color: #000; 
+    width: 100%; 
+    position: absolute; 
+    bottom: 0;
+    left: 0; 
+}
+
 /* Team Section */
 .team {
     padding-top: 75px; 
@@ -68,16 +108,8 @@ h1 {
 }
 
 
-h1:after {
-    content: "";
-    background: #333;
-    display: block;
-    height: 3px;
-    width: 350px;
-    margin: 10px auto;
-}
-
 .profile {
+    color: black;
     margin-top: 25px;
 }
 
@@ -161,27 +193,89 @@ h1:after {
 }
 
 .information {
+    color: black;
     margin: 0; 
+}
+
+.grouptext h2 {
+    padding-top: 100px; 
+    padding-bottom: 20px;
+    margin-top: 0; 
 }
 
 .grouptext {
     max-width: 600px;
-    padding-top: 10px;
-    margin-bottom: 0;
+    padding-top: 20px; 
     margin-left: auto;
     margin-right: auto;
 }
 
+
 .project {
     max-width: 600px;
+    padding-top: 20px;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
 }
 
 .ambitions {
     max-width: 600px;
+    padding-top: 20px;
+    margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+}
+
+.technology h1{
+    padding-top: 150px;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.icon-list {
+    list-style: none; 
+    padding: 0;
+    padding-bottom: 15px;
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.icon-list li {
+    width: 100px; 
+    height: 100px; 
+}
+
+.icon-list img {
+    width: 100%; 
+    height: auto; 
+    background-size: cover;
+}
+.icon-box {
+    overflow: hidden; 
+}
+
+
+.icon-box {
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: 2px solid #000000; 
+    border-radius: 8px; 
+    background-color: #ffffff; 
+    animation: float 3s ease-in-out infinite; 
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
 }
 /* Kontakter-seksjonen */
 .contacts {
@@ -222,8 +316,39 @@ h1:after {
         font-size: 18px; /* Skriftstørrelse for lenker */
     }
 
-        .contacts a:hover {
-            text-decoration: underline; /* Understreking ved hover for klarhet */
-            color: #0056b3; /* Mørkere nyanse ved hover */
-        }
+    .contacts a:hover {
+        text-decoration: underline; /* Understreking ved hover for klarhet */
+        color: #0056b3; /* Mørkere nyanse ved hover */
+    }
 
+    .animated-box {
+        color: #ffffff; /* Change text color as needed */
+        position: relative; /* Position relative for animation */
+        left: -100%; /* Start position off-screen to the left */
+        opacity: 0; /* Start with opacity 0 */
+        animation: slideInFromLeft 1s forwards; /* Single animation */
+    }
+    
+    .animated {
+        opacity: 0; /* Start hidden */
+        transform: translateX(-100%); /* Start off-screen to the left */
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth transition */
+    }
+    
+    .slide-in {
+        opacity: 1; /* Fully visible */
+        transform: translateX(0); /* Move into place */
+    }
+
+/* Optional: You can add delays for each paragraph */
+.grouptext.animated {
+    animation-delay: 1s; /* Delay for the first paragraph */
+}
+
+.project.animated {
+    animation-delay: 1.5s; /*Vent*/
+}
+
+.ambitions.animated {
+    animation-delay: 2s; /*Setter vente modus*/
+}
